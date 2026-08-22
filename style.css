@@ -1,0 +1,99 @@
+/* The game's own palette, from web/style.css, so the pages read as part of the
+   same thing rather than a generic legal boilerplate page. */
+:root {
+  --bg: #eef1f6;
+  --panel: #ffffff;
+  --ink: #1d2430;
+  --muted: #6b7482;
+  --line: #cdd4de;
+  --azure: #3d7fe0;
+  --amber: #e8a72c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2rem 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+}
+
+header { margin-bottom: 2rem; }
+
+h1 {
+  margin: 0 0 .35rem;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+.tagline { margin: 0; color: var(--muted); }
+
+h2 {
+  margin: 2rem 0 .6rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.005em;
+}
+
+h2:first-of-type { margin-top: 0; }
+
+p, li { margin: 0 0 .85rem; }
+
+ul { padding-left: 1.25rem; }
+
+a { color: var(--azure); }
+
+a:hover { text-decoration: none; }
+
+.stamp {
+  display: inline-block;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  background: #eef4ff;
+  border: 1px solid #cddffa;
+  color: #24508f;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+footer {
+  max-width: 40rem;
+  margin: 1.25rem auto 0;
+  color: var(--muted);
+  font-size: .85rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.updated {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171b22;
+    --panel: #1f242d;
+    --ink: #e7ebf2;
+    --muted: #9aa4b2;
+    --line: #333c49;
+  }
+  .stamp { background: #1c2a42; border-color: #2c4468; color: #9ec2f7; }
+  a { color: #7fb0f5; }
+}
